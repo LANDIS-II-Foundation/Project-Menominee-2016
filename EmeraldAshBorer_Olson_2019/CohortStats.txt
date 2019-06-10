@@ -1,0 +1,30 @@
+LandisData "Output Cohort Statistics" 
+
+Timestep 50
+
+SpeciesAgeStats
+
+MapNames	output/cohort-stats/{species}-{statistic}-{timestep}.img 
+
+MAX AmBeech BalsamFir BalsamPoplar Basswood BigToothAspen BitternutHickory BlackAsh BlackCherry BlackOak BlackSpruce BurOak Butternut Cottonwood Elms GreenAsh Hemlock Hophornbeam JackPine PaperBirch PinOak QuakingAspen RedCedar RedMaple RedOak RedPine ServiceBerries ShagHickory SilverMaple SugarMaple Tamarack WhiteAsh WhiteCedar WhiteOaks WhitePine WhiteSpruce Willows YellowBirch 
+AVG AmBeech BalsamFir BalsamPoplar Basswood BigToothAspen BitternutHickory BlackAsh BlackCherry BlackOak BlackSpruce BurOak Butternut Cottonwood Elms GreenAsh Hemlock Hophornbeam JackPine PaperBirch PinOak QuakingAspen RedCedar RedMaple RedOak RedPine ServiceBerries ShagHickory SilverMaple SugarMaple Tamarack WhiteAsh WhiteCedar WhiteOaks WhitePine WhiteSpruce Willows YellowBirch
+MED AmBeech BalsamFir BalsamPoplar Basswood BigToothAspen BitternutHickory BlackAsh BlackCherry BlackOak BlackSpruce BurOak Butternut Cottonwood Elms GreenAsh Hemlock Hophornbeam JackPine PaperBirch PinOak QuakingAspen RedCedar RedMaple RedOak RedPine ServiceBerries ShagHickory SilverMaple SugarMaple Tamarack WhiteAsh WhiteCedar WhiteOaks WhitePine WhiteSpruce Willows YellowBirch
+SD  AmBeech BalsamFir BalsamPoplar Basswood BigToothAspen BitternutHickory BlackAsh BlackCherry BlackOak BlackSpruce BurOak Butternut Cottonwood Elms GreenAsh Hemlock Hophornbeam JackPine PaperBirch PinOak QuakingAspen RedCedar RedMaple RedOak RedPine ServiceBerries ShagHickory SilverMaple SugarMaple Tamarack WhiteAsh WhiteCedar WhiteOaks WhitePine WhiteSpruce Willows YellowBirch 
+
+SiteAgeStats
+
+MapNames	output/cohort-stats/AGE-{statistic}-{timestep}.img 
+
+MAX	<< maximum age across all species on site 
+AVG	<< average age across all species on site
+MED	<< median age acorss all species on site  
+SD 	<< standard deviation age for all spp on site
+RICH	<< count of unique cohorts
+EVEN	<< evenness 
+COUNT	<< count of all cohorts 
+
+SiteSpeciesStats
+
+MapNames output/cohort-stats/SPP-{statistic}-{timestep}.img
+
+RICH	<< count of species 

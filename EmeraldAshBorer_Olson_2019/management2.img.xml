@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20180727</CreaDate><CreaTime>16294800</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\arcgis\desktop10.5\ArcToolbox\Toolboxes\Spatial Analyst Tools.tbx\Reclassify" Date="20180727" Time="162948">Reclassify management.img Value "1 1;1 2 2;2 3 3;NODATA 2" F:\VIFF\Harvest\management2.img DATA</Process></lineage></DataProperties></Esri></metadata>

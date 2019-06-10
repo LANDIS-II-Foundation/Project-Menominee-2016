@@ -1,0 +1,101 @@
+>>emeraldashborer.txt
+
+LandisData		"BDA Agent"
+BDAAgentName		EmeraldAshBorer
+BDPCalibrator		1
+SRDMode			mean   
+
+
+>>-------- Regional Outbreak Inputs -------------
+OutbreakPattern	CyclicUniform  	<< CyclicNormal or CyclicUniform
+			       	<< Changed to CyclicNormal 
+MaxInterval	1
+MinInterval	1
+TimeSinceLastEpidemic	0  	<< years
+TemporalType		pulse	<< pulse or variablepulse  
+
+MinROS		0
+MaxROS		3
+				<< For the pulse temporal type MinROS and MasROS define binary values that will be randomly chosed at each time step  
+                		<< background ROS (i.e., outbreak severity during nonoutbreak years) is defined as the MINROS
+                		<< MINROS = 0 means that mortality only occurs during outbreak years 
+
+>>-------- Dispersal Inputs ----------------------
+Dispersal             yes       << yes or no 
+DispersalRate	      20000	<< meters/year 
+				<< minimum logical value is a function of cell size and time step 
+EpidemicThresh	      0.3	 
+InitialEpicenterNum	1			
+OutbreakEpicenterCoeff	0.01	<< increasing this value decreases the number of epicenters may be generated for either seed or outbreak zone epicenter 
+OutbreakEpicenterThresh 1.0	
+SeedEpicenter	      no	<< yes or no -- Can seed new epicenters outside of outbreak zone 
+SeedEpicenterCoeff	20	 
+DispersalTemplate   MaxRadius	<< MaxRadius, 4N, 8N, 12N, or 24N
+				 
+
+>>-------- Neighborhood Resource Inputs-----------------
+NeighborFlag	yes	  	<< yes or no   
+NeighborSpeedUp	none	        << none, 2x, 3x, or 4x
+NeighborRadius	1400	  	<< meters 
+                             
+NeighborShape	linear    	<< uniform, linear, or gaussian
+				
+NeighborWeight	1  		
+
+>>-- Intensity Class Thresholds --
+IntensityClass2_BDP 0.25
+IntensityClass3_BDP 0.50
+
+>>Ecoregion Modifiers
+
+
+>>DisturbanceModifiers
+>>SRD Modifier	Duration 	Disturbance Type
+>>				Fire Wind 
+
+
+
+BDASpeciesParameters
+>>                                               | Susceptibility  				  |Special
+>>Species  MinorHost    2ndHost      MajorHost   | Class3        Class2       Class1       	  | Dead
+>>Name     Age SRDProb  Age SRDProb  Age SRDProb | Age MortProb  Age MortProb Age MortProb 	  | Fuel?
+>>-------------------------------------------------------------------------------------------------
+GreenAsh    0   1.0	  10  1.0	 20  1.0    0	1.0	   20  1.0	     40   1.0        yes
+WhiteAsh    10  1.0	  20  1.0	 40  1.0    10  1.0	   90  1.0     	     170  1.0	     yes
+BlackAsh    10  1.0       20  1.0        40  1.0    10  1.0        90  1.0	     170  1.0        yes
+
+IgnoredSpecies
+AmBeech
+BalsamFir
+BalsamPoplar
+Basswood
+BigToothAspen
+BitternutHickory
+BlackCherry
+BlackOak
+BlackSpruce
+BurOak
+Butternut
+Cottonwood
+Elms
+Hemlock
+Hophornbeam
+JackPine
+PaperBirch
+PinOak
+QuakingAspen
+RedCedar
+RedMaple
+RedOak
+RedPine
+ServiceBerries
+ShagHickory
+SilverMaple
+SugarMaple
+Tamarack
+WhiteCedar
+WhiteOaks
+WhitePine
+WhiteSpruce
+Willows
+YellowBirch

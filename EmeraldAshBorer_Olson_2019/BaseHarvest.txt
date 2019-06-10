@@ -1,0 +1,57 @@
+LandisData "Base Harvest" 
+
+Timestep 1 
+
+ManagementAreas "./management2.img" 
+
+Stands "./stands6.img" 
+
+Prescription CutWhiteAsh 
+
+StandRanking Random 
+
+>>MinimumAge 	 	<< optional 
+>>MaximumAge 		<< optional 
+>>TimeBetweenHarvests 	<< optional 
+
+SiteSelection Complete 
+
+CohortsRemoved SpeciesList 
+
+>> Species	Selection 
+>> -------	--------- 
+   WhiteAsh     10-300
+
+Prescription CutAllOtherAsh 
+
+StandRanking Random 
+
+>>MinimumAge 	 	<< optional 
+>>MaximumAge 		<< optional 
+>>TimeBetweenHarvests 	<< optional 
+
+SiteSelection Complete 
+
+CohortsRemoved SpeciesList 
+
+>> Species	Selection 
+>> -------	---------
+   BlackAsh	All
+   GreenAsh	All 
+
+
+HarvestImplementations 
+
+>> Mgmt Area	Prescription	Harvest Area	Begin Time	End Time 
+>> ---------	------------	------------	----------	--------
+   1		CutWhiteAsh	1.5%			         
+   1		CutAllOtherAsh	1.5%		0		8
+   1            CutAllOtherAsh	3%		9	
+ 
+
+>>----------------------------------------------------------------------
+>> OUTPUT FILES 
+
+PrescriptionMaps harvest/prescripts-{timestep}.img 
+EventLog	 harvest/log.csv 
+SummaryLog       harvest/summarylog.csv 

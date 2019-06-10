@@ -1,0 +1,7 @@
+LandisData		"Base BDA"
+
+Timestep 		1
+MapNames		BDA/{agentName}-{timestep}.img
+LogFile			BDA/bda-log.csv
+BDAInputFiles		emeraldashborer.txt
+			
