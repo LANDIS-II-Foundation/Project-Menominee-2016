@@ -1,0 +1,30 @@
+LandisData  "Output Cohort Statistics"
+
+
+Timestep   1
+
+
+>>--------------------------------
+>> OUTPUT STATISTICS (Descriptive)
+>>--------------------------------
+
+SpeciesAgeStats
+MapNames   outputs/age-per-spp/{species}-{statistic}-{timestep}.img
+
+MIN 		SugarMaple RedMaple QuakingAspen RedOak RedPine WhitePine WhiteCedar Basswood  Hemlock PinOak  		<< minimum age for each species
+MAX 		SugarMaple RedMaple QuakingAspen RedOak RedPine WhitePine WhiteCedar Basswood  Hemlock PinOak	<< maximum age for each species
+MED		SugarMaple RedMaple QuakingAspen RedOak RedPine WhitePine WhiteCedar Basswood  Hemlock PinOak			<< median age for each species
+SD		SugarMaple RedMaple QuakingAspen RedOak RedPine WhitePine WhiteCedar Basswood  Hemlock PinOak			<< standard deviation age for each species
+AVG		SugarMaple RedMaple QuakingAspen RedOak RedPine WhitePine WhiteCedar Basswood  Hemlock PinOak			<< average age for each species
+
+
+>> ---- STAT2 -----------------------------------------------------
+
+SiteAgeStats
+MapNames   outputs-cohorts/age-all-spp/AGE-{statistic}-{timestep}.img
+
+MIN 			<< minimum age across all species on site
+MAX			<< maximum age across all species on site
+MED			<< median age across all species on site
+AVG			<< average age across all species on site
+COUNT   		<< count of cohorts
