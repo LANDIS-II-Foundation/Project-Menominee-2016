@@ -1,0 +1,85 @@
+LandisData  "SCRAPPLE"
+
+>> Note:  All inputs are provided as examples only.  They are not intended to serve as default values.
+>>     Parameter                      Value
+>> ----------------------------       -------
+Timestep                            1
+
+AccidentalIgnitionsMap     	RDM_allzeros.tif
+LightningIgnitionsMap  		RDM_allzeros.tif
+RxIgnitionsMap  		ClimateMap_RDM.tif
+
+AccidentalSuppressionMap	RDM_allzeros.tif  <<ok need to make one with all zeros
+LightningSuppressionMap		RDM_allzeros.tif
+RxSuppressionMap		ClimateMap_RDM.tif
+
+GroundSlopeMap SlopeMap_RDM.tif
+UphillSlopeAzimuthMap  AspectMap_RDM.tif
+
+LightningIgnitionsB0   0.0
+LightningIgnitionsB1   0.0
+AccidentalIgnitionsB0  0.0
+AccidentalIgnitionsB1  0.0
+
+>> A generic parameter, determines the fine-fuel scale from 0-1.0. 
+>>ML: says max is 1.0 but value in input file is 550
+MaximumFineFuels 200.0  <<from DoD
+
+>> Prescribed Fire Parameters
+MaximumRxWindSpeed 80.0
+MaximumRxFireWeatherIndex 80.0
+MinimumRxFireWeatherIndex 8.0
+MaximumRxFireIntensity 3
+NumberRxAnnualFires 20
+NumberRxDailyFires 1
+FirstDayRxFires 30  <<March 1st
+LastDayRxFires 330  <<Nov 1st
+TargetRxSize 4
+
+
+MaximumSpreadAreaB0	0.0
+MaximumSpreadAreaB1	0.0 
+MaximumSpreadAreaB2	0.0
+
+SpreadProbabilityB0 -38.2 <<more negative means lower spread. 
+SpreadProbabilityB1 0.0  <<FWI 
+SpreadProbabilityB2  0.0 << relativized fine fuels. 
+SpreadProbabilityB3 1.0 << effective wind speed. 
+
+IntensityFactor:FineFuelPercent  0.3 <<Was 0.1 << Tahoe run number
+IntensityFactor:LadderFuelMaxAge 40 << Tahoe run number
+IntensityFactor:LadderFuelBiomass 1500 <<was 1200 << Tahoe run number
+
+LadderFuelSpeciesList 
+<<Need to determine
+BlackOak
+
+SuppressionMaxWindSpeed 40
+
+SuppressionTable  << Currently must be entered in this exact order
+>>Type		FWI1	FWI2	Lo	Md	High-Effectiveness
+Accidental	40	40	5	65	95
+Lightning	40	40	5	65	95
+Rx		40	60	0	5	10
+
+DeadWoodTable
+RedPine	  	22 << Tahoe run number with Arbitrary species 
+
+>> Mortality data is compiled from Brian Garrett and Brandon Collins 12/7/2017
+>> There could also be a high age cohort with slightly elevated mortality levels per Brian
+
+FireIntensityClass_1_DamageTable
+>> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
+QuakingAspen 0   40   0.45
+SugarMaple 40  80   0.1
+
+
+FireIntensityClass_2_DamageTable
+>> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
+QuakingAspen 0   40    0.6
+SugarMaple 40  80    0.25
+
+FireIntensityClass_3_DamageTable
+>> Format = species [maxAge Pmortality] ... [repeating]  Any missing data is 0.0
+QuakingAspen 0   40   0.9
+SugarMaple 40  80   0.8

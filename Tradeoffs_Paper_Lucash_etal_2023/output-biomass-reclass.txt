@@ -1,0 +1,33 @@
+LandisData  "Output Biomass Reclass"
+
+Timestep   50
+
+
+ReclassMaps
+
+>> Map Name    Forest Type    Species
+>> --------    -------------  -------
+
+>>These are forest types from AFRI, MN student
+
+reclass1 -> 	Aspen			QuakingAspen BigToothAspen PaperBirch 
+		BlAshElm		BlackAsh  Elms
+		Tamarack		Tamarack 		
+		BlackSpruce		BlackSpruce 
+		PaperBirch		PaperBirch  
+		RedPine  		RedPine 
+		HardMaplBassw		Basswood Hophornbeam SugarMaple BurOak
+		Oaks			WhiteOaks  RedOak Hophornbeam Cottonwood  BurOak
+		JackPine  		JackPine  
+               	WhitePine  		WhitePine
+               	BalsamFir		BalsamFir
+		WhiteSpruce		WhiteSpruce
+		Cedar			WhiteCedar
+		WhitePineGroup		WhitePine RedOak JackPine RedPine PaperBirch PinOak	
+		ElmAsh			BlackAsh GreenAsh
+		RedMapleOak		RedMaple 
+		SugMapBeechYB		SugarMaple YellowBirch AmBeech
+		BalsamPop		BalsamPoplar	
+		
+
+MapFileNames   output-biomass-reclass/bio-{reclass-map-name}-{timestep}.img
